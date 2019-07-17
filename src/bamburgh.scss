@@ -1,0 +1,43 @@
+// Core
+
+@import "vendor/bootstrap/scss/functions";
+@import "scss/variables/functions";
+
+@import "vendor/bootstrap/scss/variables";
+@import "scss/variables/variables";
+
+@import "vendor/bootstrap/scss/mixins";
+@import "scss/variables/mixins";
+
+// Bootstrap base
+
+@import "vendor/bootstrap/bootstrap-base";
+
+// Components
+
+@import "scss/components";
+
+// Bamburgh Z Admin Dashboard FREE
+
+// Variables
+
+@import 'scss/bamburgh-z/variables/variables';
+
+// Layout
+
+@import 'scss/bamburgh-z/layout/header';
+@import 'scss/bamburgh-z/layout/sidebar';
+@import 'scss/bamburgh-z/layout/wrapper';
+@import 'scss/bamburgh-z/layout/footer';
+
+// Elements
+
+@import 'scss/bamburgh-z/elements/page-title';
+@import 'scss/bamburgh-z/elements/dashboard-elements';
+
+// Vendors
+
+@import "vendor/perfect-scrollbar/scss/perfect-scrollbar";
+@import "vendor/fontawesome-icons/fontawesome-icons";
+@import "vendor/material-icons/material-icons";
+@import "vendor/sweet-alerts/sweet-alerts";

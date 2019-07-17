@@ -1,0 +1,41 @@
+// Admin Dashboard Variables
+
+// General
+
+$page-bg:                   $gray-200;
+$layout-spacer:             ($spacer * 2);
+
+// Header
+
+$header-height:             78px;
+$header-bg:                 rgba($white, .95);
+$header-bg-hover:           $white;
+$header-shadow:             0 0.313rem 0.75rem rgba(7, 9, 25, 0.05), 0 0.126rem 0.15rem rgba(7,9,25,.03);
+
+// Sidebar
+
+$sidebar-bg:                $gray-900;
+$sidebar-bg-light:          $white;
+$sidebar-header-bg:         transparent;
+$sidebar-content-bg:        transparent;
+$sidebar-footer-bg:         rgba(0,0,0,.1);
+$sidebar-width:             260px;
+$navlink-height:            44px;
+$navlink-inner-height:      36px;
+$sidebar-width-collapsed:   88px;
+$sidebar-shadow-light:      0px 0px 28px 0px rgba($primary, 0.08);
+
+// Sidebar mini
+
+$sidebar-width-mini:        90px;
+
+// App content
+
+$app-content-aside-bg:        $white;
+$app-content-aside-sm-width:  $sidebar-width;
+$app-content-aside-lg-width:  $sidebar-width * 1.5;
+
+// Footer
+
+$footer-height:             70px;
+$footer-bg:                 rgba($white, .5);

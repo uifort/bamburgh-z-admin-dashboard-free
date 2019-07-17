@@ -1,0 +1,18 @@
+// Card
+
+.card {
+  box-shadow: $box-shadow-default;
+
+  .card-title {
+    font-size: $font-size-lg;
+  }
+}
+
+.card-text {
+  color: $gray-800;
+}
+
+.card-transparent {
+  background: none;
+  box-shadow: 0 0 0 0 transparent !important;
+}

@@ -1,0 +1,128 @@
+// Sidebar
+
+.app-sidebar {
+  width: $sidebar-width;
+  background: $sidebar-bg;
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  height: 100%;
+  transition: width 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  z-index: 11;
+
+  &--header {
+    background: $sidebar-header-bg;
+    padding: 0;
+    min-height: $header-height;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 90%;
+      left: 5%;
+      bottom: 0;
+      height: 1px;
+      position: absolute;
+    }
+  }
+
+  &--content {
+    background: $sidebar-content-bg;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .sidebar-header {
+      text-transform: uppercase;
+      font-size: ($font-size-xs / 1.2);
+      padding: $spacer;
+      height: initial;
+      overflow: auto;
+      transition: $transition-base;
+    }
+  }
+
+  &--footer {
+    height: $footer-height;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    transition: $transition-base;
+  }
+}
+
+// Sidebar navigation
+
+.sidebar-navigation {
+  ul {
+    @include list-unstyled;
+    display: flex;
+    flex-direction: column;
+
+    & > li {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 1px 0;
+    }
+
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      height: $navlink-height;
+      padding: 0 ($layout-spacer / 1.5);
+      transition: background .3s ease-out;
+      justify-content: space-between;
+      font-size: $font-size-xs / 1.1;
+
+      .fas {
+        transition: $transition-base;
+        font-size: $font-size-xs / 1.3;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+
+        .fas {
+          margin-right: ($spacer);
+          transition: $transition-base;
+        }
+
+        span {
+          white-space: nowrap;
+          transform: translate3d(0px, 0, 0);
+          transition: $transition-base;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+
+@include media-breakpoint-down(md) {
+  .app-sidebar {
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    left: -$sidebar-width;
+  }
+
+  .sidebar-open-mobile {
+    .app-sidebar {
+      left: 0;
+      transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+      box-shadow: $box-shadow;
+      z-index: 12;
+    }
+  }
+}
+
+// Themes
+
+@import "./sidebar/themes/dark";

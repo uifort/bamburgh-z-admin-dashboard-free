@@ -1,0 +1,87 @@
+// Header
+
+.app-header {
+  height: $header-height;
+  padding: 0 $layout-spacer;
+  background: $header-bg;
+  box-shadow: $header-shadow;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: $sidebar-width;
+  right: 0;
+  z-index: 10;
+  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+
+  .toggle-sidebar-mobile {
+    display: none;
+  }
+
+  &:hover {
+    background: $header-bg-hover;
+  }
+
+  .d-44 {
+    height: 44px;
+    line-height: 44px;
+    width: 44px;
+
+    .badge-header-alt {
+      border: 0;
+      top: 1px !important;
+      box-shadow: 0 0 0 0 transparent;
+      height: 6px;
+      width: 6px;
+      left: 50%;
+      margin-left: -3px;
+    }
+  }
+}
+
+// Responsive
+
+@include media-breakpoint-down(md) {
+  .app-header {
+    left: 0;
+
+    .toggle-sidebar-mobile {
+      display: block;
+    }
+  }
+}
+
+// Elements
+
+// Search link
+
+.search-link {
+  display: flex;
+  align-items: center;
+  color: $gray-600;
+  transition: $transition-base;
+  margin-left: ($layout-spacer / 2);
+  padding-left: ($layout-spacer / 2);
+
+  input {
+    border: 0;
+    background: transparent;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .search-icon {
+    font-size: $font-size-lg;
+    color: $gray-600;
+    padding: 0 ($spacer / 1.5) 0 0;
+    transition: $transition-base;
+  }
+
+  &:hover {
+    color: $gray-700;
+
+    .search-icon {
+      color: $gray-700;
+    }
+  }
+}

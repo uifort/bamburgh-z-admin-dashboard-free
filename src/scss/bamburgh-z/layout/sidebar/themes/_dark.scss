@@ -1,0 +1,68 @@
+// Sidebar dark
+
+.app-sidebar {
+  &--dark {
+
+    .sidebar-header {
+      color: rgba($white, .2);
+    }
+
+    .app-sidebar--header {
+      &:after {
+        background: rgba($white, .1);
+      }
+    }
+
+    .app-sidebar--footer {
+      background: $sidebar-footer-bg;
+    }
+
+    .sidebar-navigation {
+      ul {
+        @include list-unstyled;
+        display: flex;
+        flex-direction: column;
+
+        & > li {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+
+          &.mm-active {
+            & > a {
+              color: rgba($white, .9);
+              background: rgba($black, .1);
+
+              .fas {
+                opacity: .6;
+              }
+            }
+          }
+        }
+
+        a {
+          color: rgba($white, .5);
+
+          &:after {
+            background: rgba($black,.2);
+          }
+
+          .fas {
+            color: $white;
+            fill: rgba($white, .25);
+            opacity: .2;
+          }
+
+          &:hover {
+            color: rgba($white, .9);
+            background: rgba($black, .1);
+
+            .fas {
+              opacity: .6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

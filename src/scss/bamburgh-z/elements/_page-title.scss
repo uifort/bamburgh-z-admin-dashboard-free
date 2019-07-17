@@ -1,0 +1,17 @@
+// Page title
+
+.page-title {
+  margin-bottom: $layout-spacer;
+
+  @include media-breakpoint-up(md) {
+    padding: ($layout-spacer * 3) ($layout-spacer * 2) ($layout-spacer * 4);
+    margin: -($layout-spacer * 2) $layout-spacer;
+    background: rgba(255, 255, 255, 0.63);
+    @include border-bottom-radius($border-radius-lg);
+    box-shadow: 0 1rem 3rem rgba(7,9,25,.1);
+  }
+
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+  }
+}

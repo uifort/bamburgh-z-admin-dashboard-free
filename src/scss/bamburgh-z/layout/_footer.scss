@@ -1,0 +1,21 @@
+// Footer
+
+.app-footer {
+  min-height: $footer-height;
+  padding: 0 $layout-spacer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $footer-bg;
+  box-shadow: 0 -0.313rem 0.75rem rgba(7,9,25,.03), 0 -0.126rem 0.15rem rgba(7,9,25,.01);
+
+  @include media-breakpoint-down(lg) {
+    display: block;
+    text-align: center;
+    padding: 0 0 ($layout-spacer /2);
+
+    & > div:first-child {
+      padding: ($layout-spacer /2) 0;
+    }
+  }
+}
